@@ -145,7 +145,7 @@ func (d *Drug) fill(values edifact.Values) {
 	d.Substitution = getString(values, 5)
 }
 
-// return the name of the drug
+// Name returns the name of the drug
 func (d *Drug) Name() string {
 	return d.ItemDescription
 }
@@ -160,17 +160,17 @@ func (d *Drug) Name() string {
 //   return &DrugQuantity{d.Quantity, d.QuantityQualifier, d.CodeListQualifier}
 // }
 
-// returns whether the drug is prescribed
+// Prescribed returns whether the drug is prescribed
 func (d *Drug) Prescribed() bool {
 	return d.ItemDescriptionIdentification == "P"
 }
 
-// returns whether the drug is dispensed
+// Dispensed returns whether the drug is dispensed
 func (d *Drug) Dispensed() bool {
 	return d.ItemDescriptionIdentification == "D"
 }
 
-// returns whether the drug is requested
+// Requested returns whether the drug is requested
 func (d *Drug) Requested() bool {
 	return d.ItemDescriptionIdentification == "R"
 }

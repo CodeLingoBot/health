@@ -48,7 +48,7 @@ func (l *ListNode) append(n Node) {
 	l.Nodes = append(l.Nodes, n)
 }
 
-// Returns a flat string of the ListNode.
+// String returns a flat string of the ListNode.
 func (l *ListNode) String() string {
 	b := new(bytes.Buffer)
 	for _, n := range l.Nodes {
